@@ -15,6 +15,7 @@ add_library(tinyrl tinyrl.c history.c complete.c ${UTF8_SOURCE})
 
 add_executable(example example.c)
 target_link_libraries(example tinyrl)
+target_include_directories (tinyrl PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_custom_target(data DEPENDS utf8data.c)
 
